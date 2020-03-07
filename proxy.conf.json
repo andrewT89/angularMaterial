@@ -1,0 +1,8 @@
+{
+    "/Api": {
+      "target": "https://jsonplaceholder.typicode.com/",
+      "secure": false,
+      "changeOrigin": true,
+      "timeout" : 180000
+    }
+  }

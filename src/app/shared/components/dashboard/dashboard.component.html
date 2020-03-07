@@ -1,0 +1,78 @@
+<div class="card">
+    <div class="card-body">
+        <span class="aligned-text">
+            <h5 class="text-danger"> Registros Generales </h5>
+        </span>
+        <div class="jumbotron jumbotron-fluid aligned-text">
+            <div class="container">
+                <h1 class="display-4 text-danger">Registros Generales</h1>
+                <p class="lead">
+                    A continuación se muestra el detalle de los usuarios tales como:
+                    <span><strong> Posts Realizados, Cantidad de usuarios y Mas .... </strong></span>
+                </p>
+            </div>
+        </div>
+        <mat-grid-list cols="3" rowHeight="1:1">
+            <mat-grid-tile>
+                <div class="card border-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-danger"><strong>Usuarios</strong></div>
+                    <div class="card-body text-danger">
+                        <h5 class="card-title">Total de Usuarios</h5>
+                        <p class="card-text aligned-text" *ngIf="( userSandbox.loadUsers$ | async )"> #: {{ quantityUsers }} </p>
+                        <div *ngIf="( userSandbox.loadUsersLoading$ | async )">
+                            <mat-spinner></mat-spinner>
+                        </div>
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="card border-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-danger"><strong>Usuarios</strong></div>
+                    <div class="card-body text-danger">
+                        <h5 class="card-title">Mayor Numero de Post</h5>
+                        <p class="card-text aligned-text"> #: 5 </p>
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="card border-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-danger"><strong>Usuarios</strong></div>
+                    <div class="card-body text-danger">
+                        <h5 class="card-title">Mayor cantidad de todos completados</h5>
+                        <p class="card-text aligned-text"> #: 5 </p>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="3" rowHeight="1:1">
+            <mat-grid-tile>
+                <div class="card border-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-danger"><strong>Usuarios</strong></div>
+                    <div class="card-body text-danger">
+                        <h5 class="card-title"> post por Usuario </h5>
+                        <p class="card-text aligned-text"> #: 8 </p>
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="card border-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-danger"><strong>Usuarios</strong></div>
+                    <div class="card-body text-danger">
+                        <h5 class="card-title"> Cantidad de Todos por Usuario </h5>
+                        <p class="card-text aligned-text"> #: 8 </p>
+                    </div>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="card border-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header text-danger"><strong>Usuarios</strong></div>
+                    <div class="card-body text-danger">
+                        <h5 class="card-title"> Cantidad de albumes por Usuario </h5>
+                        <p class="card-text aligned-text"> #: 8 </p>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>

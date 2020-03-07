@@ -1,0 +1,27 @@
+<mat-toolbar color="warn">
+    <mat-toolbar-row>
+        <span [routerLink]="['/']">Home</span>
+
+        <mat-toolbar-row>
+            <span [routerLink]="['/users']">Usuarios</span>
+        </mat-toolbar-row>
+
+        <span class="space"></span>
+
+        <!-- <button [routerLink]="['/signin']" mat-icon-button>
+        <mat-icon>account_circle</mat-icon>
+      </button> -->
+
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item disabled>
+                {{ 'Andres Felipe' }}
+            </button>
+            <button mat-menu-item>
+                Cerrar sesión
+            </button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>
